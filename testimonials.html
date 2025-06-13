@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="images/png" sizes="96x96" rel="icon" href="./images/icons8-tree-96.png">
+    <title>Testimonials | D&Y Tree Service | Professional Tree Removal & Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2d7d46',
+                        primaryDark: '#1e5c32',
+                        secondary: '#f5a623',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .animation-delay-100 {
+                animation-delay: 100ms;
+            }
+            .animation-delay-200 {
+                animation-delay: 200ms;
+            }
+            .animation-delay-300 {
+                animation-delay: 300ms;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+   <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-tree text-3xl text-primary"></i>
+                        <span class="text-xl font-bold text-gray-800">D&Y <span class="text-primary">Tree
+                                Service</span></span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="aboutus.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        About Us
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="services.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Services
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="testimonials.html"
+                        class="text-primary hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Testimonials
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="gallery.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Gallery
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="contact.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Contact Us
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="tel:2482126613"
+                        class="ml-4 px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primaryDark transition-colors duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fas fa-phone"></i>
+                        <span>(248) 212-6613</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-800 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="aboutus.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">About
+                    Us</a>
+                <a href="services.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="testimonials.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-primary hover:bg-gray-50">Testimonials</a>
+                <a href="gallery.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Gallery</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Contact
+                    Us</a>
+                <a href="tel:2482126613"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-primaryDark">Call
+                    Now: (248) 212-6613</a>
+            </div>
+        </div>
+    </nav>
+    
+   <!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-[url('./images/hero1.jpg')] bg-cover bg-center opacity-100 animate-float"></div>
+    
+    <!-- Optional Dark Overlay Gradient -->
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            What Our <span class="text-primary">Customers</span> Say
+        </h1>
+        <div class="w-24 h-1.5 bg-secondary mx-auto mb-8"></div>
+        <p class="text-xl text-white max-w-3xl mx-auto animate-fade-in animation-delay-100">
+            Hear from homeowners and businesses who trusted us with their tree care needs
+        </p>
+    </div>
+
+    <!-- Bottom Gradient Fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+</section>
+
+  <!-- Testimonials Grid -->
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-in">
+      <span class="text-primary font-bold tracking-wider">SATISFIED CUSTOMERS</span>
+      <h2 class="text-4xl font-bold text-gray-900 mt-2">Real <span class="text-primary">Testimonials</span></h2>
+      <div class="w-24 h-1.5 bg-secondary mx-auto my-6"></div>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from our happy clients</p>
+    </div>
+
+    <!-- Testimonials Swiper -->
+    <div class="swiper testimonial-swiper animate-fade-in animation-delay-100">
+      <div class="swiper-wrapper pb-16">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card bg-white p-8 rounded-xl shadow-md h-full">
+            <div class="flex items-center mb-6">
+              <div class="testimonial-avatar w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center mr-4">
+                <i class="fas fa-user text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">George S.</h4>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote relative z-10">
+              <p class="text-gray-600 italic">"D&Y Tree Service went above and beyond! They quickly removed a large tree near our house without any damage to our property. The crew was professional and cleaned up everything perfectly. Highly recommend them!"</p>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">
+              <i class="fas fa-map-marker-alt mr-1"></i> Rochester Hills, MI
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card bg-white p-8 rounded-xl shadow-md h-full">
+            <div class="flex items-center mb-6">
+              <div class="testimonial-avatar w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center mr-4">
+                <i class="fas fa-user text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">Sarah M.</h4>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote relative z-10">
+              <p class="text-gray-600 italic">"After a storm damaged several trees in our yard, D&Y responded immediately. They safely removed the hazardous limbs and even helped with insurance documentation. Their emergency service is truly a lifesaver!"</p>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">
+              <i class="fas fa-map-marker-alt mr-1"></i> Troy, MI
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card bg-white p-8 rounded-xl shadow-md h-full">
+            <div class="flex items-center mb-6">
+              <div class="testimonial-avatar w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center mr-4">
+                <i class="fas fa-user text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">Robert T.</h4>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote relative z-10">
+              <p class="text-gray-600 italic">"I've used several tree services over the years, but D&Y stands out for their expertise and fair pricing. Their crew pruned my mature oaks with such care - you can tell they really know trees!"</p>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">
+              <i class="fas fa-map-marker-alt mr-1"></i> Bloomfield Hills, MI
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card bg-white p-8 rounded-xl shadow-md h-full">
+            <div class="flex items-center mb-6">
+              <div class="testimonial-avatar w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center mr-4">
+                <i class="fas fa-user text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">Jennifer K.</h4>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote relative z-10">
+              <p class="text-gray-600 italic">"The team arrived right on time and completed the job efficiently. They took care of my large pine tree that was leaning dangerously. Excellent service and very reasonable prices compared to other quotes I received."</p>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">
+              <i class="fas fa-map-marker-alt mr-1"></i> Birmingham, MI
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card bg-white p-8 rounded-xl shadow-md h-full">
+            <div class="flex items-center mb-6">
+              <div class="testimonial-avatar w-16 h-16 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center mr-4">
+                <i class="fas fa-user text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">Michael L.</h4>
+                <div class="flex text-yellow-400 mt-1">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-quote relative z-10">
+              <p class="text-gray-600 italic">"The stump grinding service was exceptional. They removed 5 stumps in under an hour and even seeded the area afterward. Pricing was very fair compared to other companies we contacted."</p>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">
+              <i class="fas fa-map-marker-alt mr-1"></i> Sterling Heights, MI
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- Swiper Navigation -->
+                <div class="swiper-button-next hidden md:flex "></div>
+                <div class="swiper-button-prev hidden md:flex "></div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Testimonial Submission Form -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-in">
+                    <span class="text-primary font-bold tracking-wider">SHARE YOUR EXPERIENCE</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">Leave Your <span class="text-primary">Feedback</span></h2>
+                    <p class="text-lg text-gray-600 mb-8">We value your opinion! Share your experience with D&Y Tree Service to help others in our community make informed decisions.</p>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <span class="text-gray-600">Average Rating: 4.9/5</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-primary hover:bg-primaryDark text-white rounded-full shadow-md transition-all duration-300">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-primary hover:bg-primaryDark text-white rounded-full shadow-md transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-primary hover:bg-primaryDark text-white rounded-full shadow-md transition-all duration-300">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="animate-fade-in animation-delay-100">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="rating" class="block text-gray-700 font-medium mb-2">Your Rating</label>
+                            <div class="flex space-x-2">
+                                <button type="button" class="star-rating text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none" data-rating="1">
+                                    <i class="fas fa-star"></i>
+                                </button>
+                                <button type="button" class="star-rating text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none" data-rating="2">
+                                    <i class="fas fa-star"></i>
+                                </button>
+                                <button type="button" class="star-rating text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none" data-rating="3">
+                                    <i class="fas fa-star"></i>
+                                </button>
+                                <button type="button" class="star-rating text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none" data-rating="4">
+                                    <i class="fas fa-star"></i>
+                                </button>
+                                <button type="button" class="star-rating text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none" data-rating="5">
+                                    <i class="fas fa-star"></i>
+                                </button>
+                                <input type="hidden" id="rating" name="rating" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="testimonial" class="block text-gray-700 font-medium mb-2">Your Testimonial</label>
+                            <textarea id="testimonial" rows="4" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="location" class="block text-gray-700 font-medium mb-2">Location (Optional)</label>
+                            <input type="text" id="location" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <button type="submit" class="submit-btn w-full px-6 py-4 bg-secondary hover:bg-yellow-600 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Submit Testimonial
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews CTA -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Read more reviews on Google</h3>
+                    <p class="text-gray-200">See what others in our community are saying about our services</p>
+                </div>
+                <a href="#" target="_blank" class="px-8 py-3 bg-white hover:bg-gray-100 text-primary font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center">
+                    <i class="fab fa-google mr-2"></i>
+                    <span>View Google Reviews</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="animate-fade-in">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tree text-3xl text-primary"></i>
+                        <span class="text-xl font-bold">D&Y <span class="text-primary">Tree Service</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional tree care services serving Southeast Michigan with
+                        excellence and reliability.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-google text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-fade-in animation-delay-100">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition-colors duration-300">About
+                                Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                              <!-- Services -->
+                <div class="animate-fade-in animation-delay-150">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Removal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Trimming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Stump Grinding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Emergency Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Health Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Land Clearing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="animate-fade-in animation-delay-200">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
+                            <span>Serving Southeast Michigan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <a href="tel:2482126613" class="hover:text-white transition-colors duration-300">(248) 212-6613</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <a href="mailto:d.ytreeservicellc@gmail.com" class="hover:text-white transition-colors duration-300">d.ytreeservicellc@gmail.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-primary"></i>
+                            <span>24/7 Emergency Service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm animate-fade-in animation-delay-300">
+                <p>&copy; <span id="current-year"></span> D&Y Tree Service LLC. All rights reserved.</p>
+                <p class="mt-2">Licensed & Insured | ISA Certified Arborists</p>
+            </div>
+        </div>
+    </footer>
+<!-- Back to Top Button -->
+<button id="back-to-top"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-primaryDark text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible transform translate-y-4 z-50">
+    <i class="fas fa-arrow-up"></i>
+</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="images/png" sizes="96x96" rel="icon" href="./images/icons8-tree-96.png">
+    <title>Our Services | D&Y Tree Service | Professional Tree Removal & Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2d7d46',
+                        primaryDark: '#1e5c32',
+                        secondary: '#f5a623',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .animation-delay-100 {
+                animation-delay: 100ms;
+            }
+            .animation-delay-200 {
+                animation-delay: 200ms;
+            }
+            .animation-delay-300 {
+                animation-delay: 300ms;
+            }
+            .text-stroke {
+                -webkit-text-stroke: 1px #2d7d46;
+                text-stroke: 1px #2d7d46;
+            }
+        }
+
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            color: #f5a623;
+        }
+
+        .service-image {
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-tag {
+            clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+   <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-tree text-3xl text-primary"></i>
+                        <span class="text-xl font-bold text-gray-800">D&Y <span class="text-primary">Tree
+                                Service</span></span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="aboutus.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        About Us
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="services.html"
+                        class="text-primary hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Services
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="testimonials.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Testimonials
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="gallery.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Gallery
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="contact.html"
+                        class="text-gray-800 hover:text-primary font-medium transition-colors duration-300 relative group">
+                        Contact Us
+                        <span
+                            class="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="tel:2482126613"
+                        class="ml-4 px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primaryDark transition-colors duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fas fa-phone"></i>
+                        <span>(248) 212-6613</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-800 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="aboutus.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">About
+                    Us</a>
+                <a href="services.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="testimonials.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Testimonials</a>
+                <a href="gallery.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Gallery</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50">Contact
+                    Us</a>
+                <a href="tel:2482126613"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-primaryDark">Call
+                    Now: (248) 212-6613</a>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+<section class="relative min-h-[700px] pt-40 pb-32 flex items-center justify-center bg-gray-600 overflow-hidden">
+  
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-[url('./images/tree-removel.jpg')] bg-cover bg-center opacity-100 animate-float"></div>
+  
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+      Our <span class="text-primary">Professional</span> Services
+    </h1>
+    <div class="w-24 h-1.5 bg-secondary mx-auto mb-8"></div>
+    <p class="text-xl text-white max-w-3xl mx-auto animate-fade-in animation-delay-100">
+      Comprehensive tree care solutions tailored to your specific needs
+    </p>
+  </div>
+
+  <!-- Bottom Gradient Fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-20"></div>
+</section>
+
+
+
+    <!-- Services Grid Section -->
+    <section class="py-24 bg-white relative">
+     
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <span class="text-primary font-bold tracking-wider">EXPERT ARBORICULTURE</span>
+                <h2 class="text-4xl font-bold text-gray-900 mt-2">Tree Care <span class="text-primary">Services</span></h2>
+                <div class="w-24 h-1.5 bg-secondary mx-auto my-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Professional services delivered with precision and care</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Tree Removal Service -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up animation-delay-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/tree-removal-service.png" 
+                             alt="Tree Removal" 
+                             class="service-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-secondary font-bold">PREMIUM SERVICE</span>
+                                <h3 class="text-white text-2xl font-bold mt-1">Tree Removal</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-0 bg-primary text-white px-4 py-2 service-tag">
+                            <span class="text-sm font-bold">Most Requested</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-primary/10 p-4 rounded-full mr-4">
+                                <i class="fas fa-tree text-2xl text-primary service-icon"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Complete Tree Removal</h3>
+                                <p class="text-gray-500">Safe and efficient removal</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">Our certified arborists specialize in safe, efficient tree removal for trees of all sizes. Whether you have a dead, diseased, or dangerous tree, we use state-of-the-art equipment and techniques to remove it without damage to your property. Our process includes:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Full tree removal including debris cleanup</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Crane-assisted removals for difficult locations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Precision cutting techniques</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Complete site restoration</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primaryDark text-white font-bold rounded-lg transition-all duration-300 group-hover:shadow-lg">
+                            <span>Request Tree Removal</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tree Trimming & Pruning Service -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up animation-delay-200 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/pruning-vs-trimming.jpg" 
+                             alt="Tree Trimming & Pruning" 
+                             class="service-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-secondary font-bold">HEALTH & BEAUTY</span>
+                                <h3 class="text-white text-2xl font-bold mt-1">Trimming & Pruning</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-primary/10 p-4 rounded-full mr-4">
+                                <i class="fas fa-cut text-2xl text-primary service-icon"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Professional Trimming & Pruning</h3>
+                                <p class="text-gray-500">Healthier, more beautiful trees</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">Proper pruning enhances tree health, improves aesthetics, and prevents property damage. Our ISA-certified arborists follow ANSI A300 pruning standards to ensure your trees receive the care they need. Services include:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Crown cleaning and thinning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Structural pruning for young trees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Vista pruning for views</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Hazard reduction pruning</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primaryDark text-white font-bold rounded-lg transition-all duration-300 group-hover:shadow-lg">
+                            <span>Schedule Pruning</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stump Grinding Service -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up animation-delay-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/Tree+Stump+Grinding.jpeg" 
+                             alt="Stump Grinding" 
+                             class="service-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-secondary font-bold">COMPLETE SOLUTION</span>
+                                <h3 class="text-white text-2xl font-bold mt-1">Stump Grinding</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-primary/10 p-4 rounded-full mr-4">
+                                <i class="fas fa-recycle text-2xl text-primary service-icon"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Professional Stump Removal</h3>
+                                <p class="text-gray-500">Eliminate tripping hazards</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">Our industrial-grade stump grinders make quick work of even the largest stumps, grinding them down below grade level. We offer complete stump removal services that include:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Stump grinding to 12" below grade</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Surface root removal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Cleanup of all wood chips</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Optional backfill with topsoil</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primaryDark text-white font-bold rounded-lg transition-all duration-300 group-hover:shadow-lg">
+                            <span>Get Stump Removal Quote</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Emergency Services -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up animation-delay-400 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/emergency.jpg" 
+                             alt="Emergency Tree Services" 
+                             class="service-image w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-secondary font-bold">24/7 AVAILABILITY</span>
+                                <h3 class="text-white text-2xl font-bold mt-1">Emergency Services</h3>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-2 service-tag">
+                            <span class="text-sm font-bold">24/7 Response</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-primary/10 p-4 rounded-full mr-4">
+                                <i class="fas fa-exclamation-triangle text-2xl text-primary service-icon"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Storm & Emergency Response</h3>
+                                <p class="text-gray-500">When you need us most</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">When storm damage strikes or trees become hazardous, our emergency response team is available 24/7 to assess and address the situation. Our rapid response services include:</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>24/7 emergency tree removal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Storm damage cleanup</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Hazardous limb removal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span>Insurance documentation assistance</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tel:2482126613" class="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-all duration-300 group-hover:shadow-lg">
+                                <i class="fas fa-phone mr-2"></i>
+                                <span>Emergency Call Now</span>
+                            </a>
+                            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primaryDark text-white font-bold rounded-lg transition-all duration-300 group-hover:shadow-lg">
+                                <span>Non-Emergency</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-in">
+                    <span class="text-primary font-bold tracking-wider">SERVING SOUTHEAST MICHIGAN</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">Our <span class="text-primary">Service Areas</span></h2>
+                    <p class="text-lg text-gray-600 mb-8">We proudly serve residential and commercial clients throughout Southeast Michigan with our professional tree care services.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                                <span>Primary Service Areas</span>
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Rochester Hills</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Troy</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Bloomfield Hills</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Birmingham</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                                <span>Extended Areas</span>
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Royal Oak</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Sterling Heights</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Shelby Township</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>And surrounding communities</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Don't see your area listed? Contact us to check if we service your location.</p>
+                    <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-secondary hover:bg-yellow-600 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <span>Check Service Availability</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="animate-fade-in animation-delay-100 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="./images/map.png" 
+                             alt="Service Area Map" 
+                             class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                            <div class="bg-white p-8 rounded-xl text-center shadow-lg">
+                                <i class="fas fa-map-marked-alt text-4xl text-primary mb-4"></i>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Service Area Map</h3>
+                                <p class="text-gray-600 mb-4">We cover a 20-mile radius around Rochester Hills</p>
+                                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                                    <span>View Detailed Map</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width CTA -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Property?</h2>
+                <p class="text-xl opacity-90 mb-8">Get your free estimate from our certified arborists today</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:2482126613" class="inline-flex items-center justify-center px-8 py-4 bg-secondary hover:bg-yellow-600 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>(248) 212-6613</span>
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-primary font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                        <span>Request an Estimate Today</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="animate-fade-in">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tree text-3xl text-primary"></i>
+                        <span class="text-xl font-bold">D&Y <span class="text-primary">Tree Service</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional tree care services serving Southeast Michigan with
+                        excellence and reliability.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-google text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-fade-in animation-delay-100">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition-colors duration-300">About
+                                Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                        <li><a href="testimonials.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                              <!-- Services -->
+                <div class="animate-fade-in animation-delay-150">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Removal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Trimming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Stump Grinding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Emergency Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Tree Health Care</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Land Clearing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="animate-fade-in animation-delay-200">
+                    <h3 class="text-lg font-bold mb-4 text-primary">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
+                            <span>Serving Southeast Michigan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <a href="tel:2482126613" class="hover:text-white transition-colors duration-300">(248) 212-6613</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <a href="mailto:d.ytreeservicellc@gmail.com" class="hover:text-white transition-colors duration-300">d.ytreeservicellc@gmail.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-primary"></i>
+                            <span>24/7 Emergency Service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm animate-fade-in animation-delay-300">
+                <p>&copy; <span id="current-year"></span> D&Y Tree Service LLC. All rights reserved.</p>
+                <p class="mt-2">Licensed & Insured | ISA Certified Arborists</p>
+            </div>
+        </div>
+    </footer>
+<!-- Back to Top Button -->
+<button id="back-to-top"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-primaryDark text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible transform translate-y-4 z-50">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
